@@ -4,10 +4,13 @@ import logging, os, time
 from scrapy_splash import SplashRequest
 from scrapy.utils.log import configure_logging
 from csrc.common.driver import PROJECT_ROOT_PATH
+from csrc.common.splash_scripts import click_bt1_bt2_bt3_script
+from csrc.settings import USER_AGENT
 
 splash_args = {
     'wait': 0.5,
 }
+
 
 class CsrcSpider(scrapy.Spider):
     
@@ -22,12 +25,12 @@ class CsrcSpider(scrapy.Spider):
     )
 
     def start_requests(self):
-        splash_args = {
-            'wait': 0.5,
-        }
+        headers = {"USER-AGENT": USER_AGENT}
         for url in self.start_urls:
-            yield SplashRequest(url, self.parse_result, endpoint='render.html',
-                                args=splash_args)
+            yield SplashRequest('https://www.ubereats.com/new_york/', self.parse, endpoint='execute', args={
+                'lua_source': click_bt1_bt2_bt3_script,
+                'wait': 5
+            }, splash_headers=headers, headers=headers)
 
     def parse(self, response):
         t0 = time.time()
