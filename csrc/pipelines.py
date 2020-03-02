@@ -96,8 +96,8 @@ class CrawlMetaItemWriterPipeline(MonthMetaItemWriterPipeline):
         self._dump_fields = ["url_md5", "crawl_url", "index_num", "classify_text",
                              "release_agency", "release_date", "title", "article_id",
                              "subject"]
-        self._md5_suffix = CRAWL_META_SUFFIX
-        self._meta_suffix = CRAWL_MD5_SUFFIX
+        self._md5_suffix = CRAWL_MD5_SUFFIX
+        self._meta_suffix = CRAWL_META_SUFFIX
         
     def process_item(self, item, spider):
         month_str = strip_date_day(item["release_date"])
