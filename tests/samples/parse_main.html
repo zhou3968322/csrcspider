@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>中国证券监督管理委员会</title>
+<link href="../../images/zjh.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="body_bk">
+<div class="body">
+<script>
+function simpsearch()
+{
+	var url_str=document.location.href;
+	var url_lst=url_str.split("/");
+	url_str="";
+
+	for(var i=3;i<url_lst.length;i++){
+		if(url_lst[i].indexOf(".html")==-1)
+		{
+			url_str+=url_lst[i]+"/";
+		}
+	}
+	url_str = url_str.substring(0,url_str.length -1);
+	//alert(url_str);
+	var searchword=document.simsearch.schword.value;
+	//alert(searchword);
+	var mess='<>/?{}=&*%^~`/~`()[]';
+	if(searchword==""||searchword==null||searchword=="本站点检索"){
+		alert('请检查输入条件，因为它不符合要求！');
+		return false;
+	}
+
+	if(searchword.length>50)
+	{
+		alert("字符超长、最多输入50个汉字！");
+		return false;
+	}
+	document.simsearch.searchword.value= url_str;
+	document.simsearch.schword.value= searchword;	
+	
+	document.simsearch.method='post';
+	//document.simsearch.action="http://180.9.1.54:9000/was40/search";
+	document.simsearch.action='/wcm/websearch/zjh_simp_list.jsp';
+}
+</script>
+
+
+<div class="topbar">
+  <div style="float:left; line-height:25px;">
+    <a href="http://www.csrc.gov.cn/SuniT/www.csrc.gov.cn/pub/newsite" onmousedown="a1.style.display='none';a2.style.display='block'">繁体版</a>|<a href="http://www.csrc.gov.cn/pub/csrc_en">English</a>
+  </div>
+
+   <div class="sobox">
+    	<table>
+          <tbody><tr>
+            <td>站内搜索：</td>
+<form method="post" action="" name="simsearch" id="simsearch" onsubmit="return simpsearch()"></form>
+
+            <td>
+                        <input name="schword" type="text" class="search_input" id="schword" onclick="javascript:if(this.value=='本站点检索') this.value=''" value="本站点检索">
+                        <input type="hidden" name="searchword" value="">
+                        <input type="hidden" name="channelid" value="3858">
+                        <input type="hidden" name="whereId" value="">
+           </td>
+            <td><input class="so_btn" name="" type="submit" value=""></td>
+            <td><input class="so_btn_2" name="" type="button" value="高级" onclick="window.location.href='/wcm/websearch/advsearch.htm'"></td>
+
+          </tr>
+        </tbody></table>
+        <div class="clear"></div>
+    </div>
+  <div class="clear"></div>
+</div>
+
+<div class="banner"><img src="../../images/banner.jpg" width="990"></div>
+
+
+       <div class="menu">
+    	<div class="f_left"><a href="http://www.csrc.gov.cn" target="_self"><img src="../../images/menu_index.gif"></a></div>
+        <div class="f_left"><img src="../../images/menu_1.gif"></div>
+        <div class="menu_li" style="z-index:9999">
+<!--隐藏部分  政务        	
+<div class="menu_jia" style="display:none" id="b11" >
+	<div class="menu_jia_di" style="z-index:9999">
+    <table width="100%" onmouseout="b11.style.display='none';a11.style.display='block'" onmouseover="b11.style.display='block'">
+      <tr>
+    
+    <td><a href="/pub/zjhpublic/">信息公开</a></td>
+    <td><a href="http://neris.csrc.gov.cn/falvfagui/">政策法规</a></td>
+    <td><a href="../../zjhxwfb/">新闻发布</a></td>
+  </tr>
+  <tr>
+    <td><a href="/pub/newsite/xxpl/">信息披露</a></td>
+    <td><a href="/pub/newsite/sjtj/">统计数据</a></td>
+    <td><a href="/pub/newsite/rjb/gwykl/">人事招聘</a></td>
+  </tr>
+
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+<tr>
+        <td><a href="#">机构设置</a></td>
+        <td><a href="#">信息公开</a></td>
+        <td><a href="#">新闻发布</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">信息披露</a></td>
+        <td><a href="#">统计数据</a></td>
+        <td><a href="#">人事信息</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+
+    </table>
+		</div>
+</div>
+<table width="100%" id="a11" onmouseover="a11.style.display='none';b11.style.display='block'">-->
+<table width="100%">
+  <tbody><tr>
+    <!--td><a href="/pub/newsite/zjhjs/">机构设置</a></td-->
+    <td><a href="/pub/zjhpublic/">信息公开</a></td>
+    <td><a href="http://neris.csrc.gov.cn/falvfagui/">政策法规</a></td>
+    <td><a href="../../zjhxwfb/">新闻发布</a></td>
+  </tr>
+  <tr>
+    <td><a href="/pub/newsite/xxpl/">信息披露</a></td>
+    <td><a href="/pub/newsite/sjtj/">统计数据</a></td>
+    <td><a href="/pub/newsite/rjb/gwykl/">人事招聘</a></td>
+  </tr>
+
+</tbody></table>
+<!--div class="menu_btn_1"><a href="#"><img src="../../images/menu_btn.gif" width="19" height="19"></a></div-->
+
+      </div>
+        <div class="f_left"><img src="../../images/menu_2.gif"></div>
+        <div class="menu_li" style="z-index:9999">
+        	<table width="100%" id="c11" onmouseover="c11.style.display='none';d11.style.display='block'">
+  <tbody><tr>
+    <td><a href="http://neris.csrc.gov.cn/alappl/home/guideH">办事指南</a></td>
+    <td><a href="/pub/newsite/zxbs/">在线申报</a></td>
+       <td><a href="/pub/newsite/zjjg/hfjgml/">监管对象</a></td>
+  </tr>
+  <tr>
+    <td><a href="/pub/newsite/zjjg/ywzg/">业务资格</a></td>
+    <td><a href="/pub/newsite/zjjg/ryzg/">人员资格</a></td>
+    <td><a href="/pub/newsite/tzzbh1/">投资者保护</a></td>
+  </tr>
+
+</tbody></table>
+<div class="menu_jia" style="display:none" id="d11">
+	<div class="menu_jia_di" style="z-index:9999">
+    <table width="100%" onmouseout="d11.style.display='none';c11.style.display='block'" onmouseover="d11.style.display='block'">
+        <tbody><tr>
+    <td><a href="http://neris.csrc.gov.cn/alappl/home/guideH">办事指南</a></td>
+    <td><a href="/pub/newsite/zxbs/">在线申报</a></td>
+     <td><a href="/pub/newsite/zjjg/hfjgml/">监管对象</a></td>
+  </tr>
+  <tr>
+    <td><a href="/pub/newsite/zjjg/ywzg/">业务资格</a></td>
+    <td><a href="/pub/newsite/zjjg/ryzg/">人员资格</a></td>
+    <td><a href="/pub/newsite/tzzbh1/">投资者保护</a></td>
+  </tr>
+      <tr>
+        <td colspan="3"><a href="/pub/newsite/djffzqqhhdj/ffzqqhjs/">非法证券期货风险警示</a></td>
+        
+
+      </tr>
+    </tbody></table>
+	<!--div class="menu_btn_2"><a href="#"><img src="../../images/menu_btn2.gif" width="19" height="19"></a></div-->
+	</div>
+</div>
+
+        </div>
+        <div class="f_left"><img src="../../images/menu_3.gif"></div>
+        <div class="menu_li">
+
+
+<!--隐藏部分 互动
+<div class="menu_jia" style="display:none" id="f11" >
+	<div class="menu_jia_di" style="z-index:9999">
+    <table width="100%" onmouseout="f11.style.display='none';e11.style.display='block'" onmouseover="f11.style.display='block'">
+          <tr>
+    <td><a href="http://gzly.12386.gov.cn/csrc/sh.inb.publicmessage!messageList.sh">主席信箱</a></td>
+    <td><a href="/pub/newsite/hdjl/xfzl/">信访专栏</a></td>
+    <td><a href="http://jubao.csrc.gov.cn">举报专栏</a></td>
+    
+      </tr>
+  <tr>
+    <td><a href="/pub/newsite/hdjl/zxft/">在线访谈</a></td>
+    <td><a href="/pub/newsite/hdjl/yjzj/index.htm">征求意见</a></td>
+    <td><a href="#">网上调查</a></td>
+   </tr>
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+<tr>
+        <td><a href="#">机构设置</a></td>
+        <td><a href="#">信息公开</a></td>
+        <td><a href="#">新闻发布</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">信息披露</a></td>
+        <td><a href="#">统计数据</a></td>
+        <td><a href="#">人事信息</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">政策法规</a></td>
+        <td><a href="#">产品披露</a></td>
+        <td><a href="#">诚信建设</a></td>
+      </tr>
+
+    </table>
+	
+	</div>
+</div>
+        	<table width="100%" id="e11" onmouseover="e11.style.display='none';f11.style.display='block'">-->
+<table width="100%">
+  <tbody><tr>
+    <td><a href="http://gzly.csrc12386.org.cn/csrc">公众留言</a></td>
+    <td><a href="/pub/newsite/hdjl/xfzl/">信访专栏</a></td>
+    <td><a href="http://neris.csrc.gov.cn/jubaozhongxin">举报专栏</a></td>
+      
+      </tr>
+  <tr>
+    <td><a href="/pub/newsite/hdjl/zxft/">在线访谈</a></td>
+    <td><a href="/pub/newsite/hdjl/yjzj/index.htm">征求意见</a></td>
+    <td><a href="http://neris.csrc.gov.cn/lianzhengpingyi">廉政评议</a></td>   
+   </tr>
+  
+
+</tbody></table>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+<div class="srcbox">
+    	<div class="f_left"><img src="../../images/icon01.gif" width="38" height="32"></div>
+        <div class="weizhi">
+        	您的位置：<a href="./../../" target="_self">首页</a>&nbsp;&gt;&nbsp;<a href="./../" target="_self">信息披露</a>&nbsp;&gt;&nbsp;<a href="./" target="_self">预先披露</a>
+        </div>
+        <div class="f_right"><img src="../../images/srcbg_r.gif" width="1" height="32"></div>
+        <div class="clear"></div>
+    </div>
+
+  	
+    <!--概览分类-->
+    <div class="er_main">
+    	<div class="er_left">
+        	<div class="title">信息披露</div>
+            <div class="left_nav">
+            	<ul>
+			<li><a href="./">预先披露</a></li>
+		<!--<li><a href="http://nlpc.csrc.gov.cn/" target="_blank">非上市公众公司信息披露</a>
+</li>
+		<li><a href="http://fund.csrc.gov.cn" target="_blank">基金信息披露</a>
+</li>
+		<li><a href="../sjspl/">上交所信息披露</a></li>
+		<li><a href="../shjspl/">深交所信息披露</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="er_right">
+        	<div>
+            	<div class="title">
+                	<div class="bt">预先披露</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="fl_list">
+                	<ul id="myul">
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202002/t20200207_370606.htm" target="_blank">新乡市瑞丰新材料股份有限公司创业板首次公开发行股票招股说明书（申报稿2020年1月...</a>
+                            <span>2020-02-07</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202002/t20200207_370605.htm" target="_blank">上海德必文化创意产业发展（集团）股份有限公司创业板首次公开发行股票招股说明书...</a>
+                            <span>2020-02-07</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202002/t20200207_370603.htm" target="_blank">湖州银行股份有限公司首次公开发行股票招股说明书（申报稿2020年1月20日报送）</a>
+                            <span>2020-02-07</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200120_370256.htm" target="_blank">新亚电子股份有限公司首次公开发行股票招股说明书（申报稿2020年1月7日报送）</a>
+                            <span>2020-01-20</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200116_369854.htm" target="_blank">成都彩虹电器（集团）股份有限公司首次公开发行股票招股说明书（申报稿2019年12月3...</a>
+                            <span>2020-01-16</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200116_369853.htm" target="_blank">法狮龙家居建材股份有限公司首次公开发票招股说明书（申报稿 2019年12月30日报送）</a>
+                            <span>2020-01-16</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200116_369852.htm" target="_blank">浙江长华汽车零部件股份有限公司首次公开发行股票招股说明书（申报稿2020年1月6日...</a>
+                            <span>2020-01-16</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200116_369851.htm" target="_blank">长春吉大正元信息技术股份有限公司首次公开发行股票招股说明书（申报稿2019年12月3...</a>
+                            <span>2020-01-16</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200114_369699.htm" target="_blank">浙江华生科技股份有限公司首次公开发行股票招股说明书（申报稿2020年1月6日报送）</a>
+                            <span>2020-01-14</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200114_369697.htm" target="_blank">江苏协和电子股份有限公司首次公开发行股票招股说明书（申报稿 2020年1月3日报送）</a>
+                            <span>2020-01-14</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200114_369698.htm" target="_blank">深圳威迈斯新能源股份有限公司首次公开发行股票招股说明书（申报稿 2020年1月6日报...</a>
+                            <span>2020-01-14</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200114_369696.htm" target="_blank">江苏博迁新材料股份有限公司首次公开发行股票招股说明书（申报稿2020年1月6日报送）</a>
+                            <span>2020-01-14</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200114_369694.htm" target="_blank">北京竞业达数码科技股份有限公司首次公开发行股票招股说明书（申报稿2019年12月30...</a>
+                            <span>2020-01-14</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200114_369695.htm" target="_blank">海南葫芦娃药业集团股份有限公司首次公开发行股票招股说明书（申报稿2019年12月27...</a>
+                            <span>2020-01-14</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200110_369575.htm" target="_blank">浙江东亚药业股份有限公司首次公开发行股票招股说明书（申报稿2019年12月9日报送）</a>
+                            <span>2020-01-10</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200110_369576.htm" target="_blank">浙江万胜智能科技股份有限公司创业板首次公开发行股票招股说明书（申报稿2019年12...</a>
+                            <span>2020-01-10</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200110_369574.htm" target="_blank">无锡新洁能股份有限公司首次公开发行股票招股说明书（申报稿2019年12月5日报送）</a>
+                            <span>2020-01-10</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200110_369573.htm" target="_blank">深圳欧陆通电子股份有限公司创业板首次公开发行股票招股说明书（申报稿2020年1月2...</a>
+                            <span>2020-01-10</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200110_369572.htm" target="_blank">广东南海农村商业银行股份有限公司首次公开发行股票招股说明书（申报稿2019年12月6...</a>
+                            <span>2020-01-10</span>
+                            <div class="clear"></div>
+                        </li>
+					
+						<li>
+                        	<a href="../../../zjhpublic/G00306202/202001/t20200103_369066.htm" target="_blank">国安达股份有限公司创业板首次公开发行股票招股说明书（申报稿2019年12月23日报送）</a>
+                            <span>2020-01-03</span>
+                            <div class="clear"></div>
+                        </li>
+					
+                    </ul>
+                </div>
+            </div>
+
+<link href="../../css/page.css" rel="stylesheet" type="text/css">
+<link href="../../css/outlinetable.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../../js/page.js"></script>
+
+<div class="page"> 
+<script language="javascript">
+temp1 = document.getElementById('myul');
+lis1 = temp1.getElementsByTagName('li');
+lishu1 = lis1.length; //li元素的个数
+
+
+if(lishu1>20){
+document.write("<div class='page' id='list_navigator'></div>");
+}
+</script>
+
+<script language="JavaScript">
+function getRecordNum(){
+    var count = 0;
+
+temp = document.getElementById('myul');
+lis = temp.getElementsByTagName('li');
+lishu = lis.length; //li元素的个数
+    if(lishu<0){
+    var tableObj = document.getElementById("documentContainer");
+	for(var i=0;i<tableObj.rows.length;i++)
+	{
+	   for(var j=0;j<tableObj.rows[i].cells.length;j++)
+	   {
+			if(tableObj.rows[i].cells[j].nodeType != 1){
+				continue;
+			}
+			if(tableObj.rows[i].cells[j].className=="news_txt_list"){
+				count++;
+			}
+	   }
+	}	
+    return count;}
+    else{count=lishu;
+    return count;
+
+
+}
+}
+//加载翻页信息
+
+		var m_nRecordCount =0;
+		m_nRecordCount="4625";
+		if(m_nRecordCount.length == 0){
+			m_nRecordCount = getRecordNum();
+		}
+		//alert(m_nRecordCount); 
+		
+		
+		var currentPage = 0;//所在页从0开始
+var prevPage = currentPage-1//上一页
+var nextPage = currentPage+1//下一页
+var currentPage2 = currentPage + 1;//当前页 
+var countPage = 25//共多少页
+document.write("共"+"<span class='current'>"+countPage+"</span>"+"页"+"&nbsp;&nbsp;共<span class='current'>"+m_nRecordCount+"</span>条记录");
+document.write("&nbsp;&nbsp;共每页"+"<span class='current'>"+"20</span>"+"记录&nbsp;&nbsp;");
+			//设置上一页代码
+			if(countPage>1&&currentPage!=0&&currentPage!=1)
+				document.write("<span class='nav_go_pre disabled_go'><a href=\"index"+"_" + prevPage + "."+"html\" >上一页</a></span>");
+			else if(countPage>1&&currentPage!=0&&currentPage==1)
+				document.write("<span class='nav_go_pre disabled_go'><a href=\"index.html\">上一页</a></span>");
+			else
+				document.write("<span class='nav_go_pre disabled_go'>上一页</span>");
+			//循环
+			var num = 5;
+			for(var i=0+(currentPage-1-(currentPage-1)%num) ; i<=(num+(currentPage-1-(currentPage-1)%num))&&(i<countPage) ; i++){
+				if(currentPage==i)
+					document.write("<span class='nav_page nav_currpage'>"+(i+1)+"</span>");
+				else if(i==0)
+					document.write("<span class='nav_page'><a href=\"index.html\" >"+(i+1)+"</a></span>");
+				else
+					document.write("<span class='nav_page'><a href=\"index"+"_" + i + "."+"html\" >"+(i+1)+"</a></span>");
+			}
+
+			//设置下一页代码 
+			if(countPage>1&&currentPage!=(countPage-1))
+				document.write("<span class='nav_go_next'><a href=\"index"+"_" + nextPage + "."+"html\" >下一页</a><span>");
+			else
+				document.write("<span class='nav_go_next'>下一页</span>");
+			
+//跳转页面
+document.write("<font class='wcm_pointer'>跳转至第<input type='text' id='num' value="+(currentPage+1)+" style='width:30px;font-size:12px;'>"+
+             "&nbsp;<a><input style='font-size:12px;background:none;border:none;' type='submit' value='>>' onClick=javacript:toPage()></a></font>");
+             
+function toPage(){
+var _num = document.getElementById("num").value;
+if(isNaN(_num)){
+alert("请输入数字");
+return false;
+}
+var str = "index"+"_"+(_num-1)+"."+"html";
+var url = location.href.substring(0,location.href.lastIndexOf("/")+1);
+if(_num<=1||_num==null)
+location.href = url+"index"+"."+"html";
+else if(_num>countPage)
+alert("本频道最多"+countPage+"页");
+else
+location.href = url+str;
+}
+
+</script>共<span class="current">25</span>页&nbsp;&nbsp;共<span class="current">4625</span>条记录&nbsp;&nbsp;共每页<span class="current">20</span>记录&nbsp;&nbsp;<span class="nav_go_pre disabled_go">上一页</span><span class="nav_page nav_currpage">1</span><span class="nav_page"><a href="index_1.html">2</a></span><span class="nav_page"><a href="index_2.html">3</a></span><span class="nav_page"><a href="index_3.html">4</a></span><span class="nav_page"><a href="index_4.html">5</a></span><span class="nav_page"><a href="index_5.html">6</a></span><span class="nav_go_next"><a href="index_1.html">下一页</a><span><font class="wcm_pointer">跳转至第<input type="text" id="num" value="1" style="width:30px;font-size:12px;">&nbsp;<a><input style="font-size:12px;background:none;border:none;" type="submit" value="&gt;&gt;" onclick="javacript:toPage()"></a></font>
+</span></span></div>
+
+
+
+
+
+<!--<div class="page"> 
+
+
+<script type="text/javascript">
+var currentPage = 0;//所在页从0开始
+
+var countPage = 25//共多少页
+document.write("共"+countPage+"页");
+
+</script>
+&nbsp;&nbsp;0条
+
+                         			 <script type="text/javascript">
+			var currentPage = 0;//所在页从0开始
+			var prevPage = currentPage-1//上一页
+			var nextPage = currentPage+1//下一页
+
+		         var currentPage2 = currentPage + 1;//当前页 
+                                          
+			                       
+                        document.write("当前第"+currentPage2+"页&nbsp;&nbsp;");
+			//设置上一页代码
+			if(countPage>1&&currentPage!=0&&currentPage!=1)
+				document.write("<a href=\"index.html\" >首页</a><a href=\"index"+"_" + prevPage + "."+"html\" >上一页</a>");
+			else if(countPage>1&&currentPage!=0&&currentPage==1)
+				document.write("<a href=\"index.html\" >首页</a><a href=\"index.html\">上一页</a>");
+			else
+				document.write("<span>首页</span><span>上一页</span>");
+			//循环
+			var num = 5;
+			for(var i=0+(currentPage-1-(currentPage-1)%num) ; i<=(num+(currentPage-1-(currentPage-1)%num))&&(i<countPage) ; i++){
+				if(currentPage==i)
+					document.write("<span class='current'>"+(i+1)+"</span>");
+				else if(i==0)
+					document.write("<a href=\"index.html\" >"+(i+1)+"</a>");
+				else
+					document.write("<a href=\"index"+"_" + i + "."+"html\" >"+(i+1)+"</a>");
+			}
+
+			//设置下一页代码 
+			if(countPage>1&&currentPage!=(countPage-1))
+				document.write("<a href=\"index"+"_" + nextPage + "."+"html\" >下一页</a><a href=\"index_" + (countPage-1) + ".html\" >尾页</a>");
+			else
+				document.write("<span>下一页</span><span>尾页</span>");
+				
+			</script>
+
+            </div>-->
+		
+		
+		</div>
+        <div class="clear"></div>
+    </div>
+
+<div class="foot"><!--img src="../../2014/images/foot_link.gif"><br /-->
+    <img src="../../images/foot_line.gif"><br>
+   	<a href="/pub/newsite/fzlm/gywm">关于我们</a> | <a href="/pub/newsite/fzlm/lxwm">联系我们</a> | <a href="/pub/newsite/fzlm/flsm">法律声明</a> <br>
+    版权所有：中国证券监督管理委员会 京ICP备 05035542号 　<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700080" style="text-decoration:none;" target="_blank"><img src="../../images/gaba.png" style="vertical-align:middle;" border="0"><font color="#333333"> 京公网安备 11040102700080号</font></a>
+    </div>
+
+
+</div>
+</div>
+
+</body></html>

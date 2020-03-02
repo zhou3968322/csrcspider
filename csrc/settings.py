@@ -9,7 +9,9 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-import random
+import random, os
+
+PROJECT_ROOT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
 
 BOT_NAME = 'csrcspider'
 
@@ -63,9 +65,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    'python123demo.middlewares.Python123DemoSpiderMiddleware': 543,
-# }
+SPIDER_MIDDLEWARES = {
+   'csrc.middlewares.CsrcSpiderMiddleware': 543,
+}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
@@ -88,9 +90,13 @@ HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'python123demo.pipelines.Python123DemoPipeline': 300,
-# }
+ITEM_PIPELINES = {
+    'csrc.pipelines.CrawlItemFilterPipeline': 100,
+    'csrc.pipelines.FileItemFilterPipeline': 200,
+    'csrc.pipelines.CsrcFilesPipeline': 300,
+    'csrc.pipelines.FileMetaItemWriterPipeline': 400,
+    'csrc.pipelines.CrawlMetaItemWriterPipeline': 500
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -125,3 +131,47 @@ SPLASH配置
 """
 
 SPLASH_URL = 'http://127.0.0.1:8050'
+
+"""
+文件的日期过滤
+"""
+if "RELEASE_MIN_DATE" in os.environ:
+    RELEASE_MIN_DATE = os.environ["RELEASE_MIN_DATE"]
+else:
+    RELEASE_MIN_DATE = "2019-10-31 23:59:59"
+
+if "RELEASE_MAX_DATE" in os.environ:
+    RELEASE_MAX_DATE = os.environ["RELEASE_MAX_DATE"]
+else:
+    RELEASE_MAX_DATE = "2020-12-31 23:59:59"
+
+"""
+数据的存储地方
+"""
+
+if "DATA_DIR" in os.environ:
+    DATA_DIR = os.environ["DATA_DIR"]
+else:
+    DATA_DIR = os.path.join(PROJECT_ROOT_PATH, 'data')
+
+"""
+文件Meta的保存位置
+"""
+META_DIR = os.path.join(DATA_DIR, 'meta')
+if not os.path.isdir(META_DIR):
+    os.mkdir(META_DIR)
+FILE_MD5_SUFFIX = "_file_meta_md5.txt"
+FILE_META_SUFFIX = "_file_meta.txt"
+CRAWL_MD5_SUFFIX = "_crawl_meta_md5.txt"
+CRAWL_META_SUFFIX = "_crawl_meta.txt"
+
+
+"""
+文件保存目录
+"""
+
+FILES_STORE = os.path.join(DATA_DIR, 'files')
+if not os.path.isdir(FILES_STORE):
+    os.mkdir(FILES_STORE)
+FILES_URLS_FIELD = 'file_url'
+
