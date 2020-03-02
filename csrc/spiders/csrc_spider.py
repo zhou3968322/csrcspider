@@ -51,6 +51,7 @@ class CsrcSpider(scrapy.Spider):
                                 headers=headers)
 
     def parse_get_child_url(self, response):
+        logger.info('start to get child element,url:{}'.format(response.url))
         headers = {"USER-AGENT": random.choice(user_agent_list)}
         child_selectors = response.selector.xpath("//*[@id='myul']//a")
         for child_selector in child_selectors:
